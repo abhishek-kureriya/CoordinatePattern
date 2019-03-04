@@ -63,7 +63,7 @@ extension APIClient {
         let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
             
             //MARK: change to main queue
-            //let temperatures = try? JSONDecoder().decode(Temperatures.self, from: json as! Data)
+           
             
             DispatchQueue.main.async {
                 guard let json = json else {
