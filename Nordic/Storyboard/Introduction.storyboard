@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Introduction View Controller-->
+        <scene sceneID="9Cq-kl-GJn">
+            <objects>
+                <viewController storyboardIdentifier="IntroductionViewController" id="4GP-QI-hKA" customClass="IntroductionViewController" customModule="Nordic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ixu-n1-g2W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1Intro" translatesAutoresizingMaskIntoConstraints="NO" id="4mN-Yf-EKk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjk-oN-vEF">
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CQ8-5d-wxk"/>
+                                </constraints>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadNextView:" destination="4GP-QI-hKA" eventType="touchUpInside" id="fdh-gj-ULD"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DmC-0V-jZ1">
+                                <rect key="frame" x="143" y="555" width="91" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.99582618474960327" green="0.44085633754730225" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BC-z5-e4x">
+                                <rect key="frame" x="21" y="404" width="342" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="igB-j2-pMC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4mN-Yf-EKk" firstAttribute="leading" secondItem="Ixu-n1-g2W" secondAttribute="leading" id="1Gx-9w-pH9"/>
+                            <constraint firstItem="4mN-Yf-EKk" firstAttribute="top" secondItem="Ixu-n1-g2W" secondAttribute="top" id="7x1-KG-tp4"/>
+                            <constraint firstItem="4BC-z5-e4x" firstAttribute="leading" secondItem="OVK-Qj-n9q" secondAttribute="leading" constant="21" id="AgP-Oj-3Ap"/>
+                            <constraint firstItem="Cjk-oN-vEF" firstAttribute="bottom" secondItem="OVK-Qj-n9q" secondAttribute="bottom" id="GhP-41-WGo"/>
+                            <constraint firstItem="OVK-Qj-n9q" firstAttribute="trailing" secondItem="4BC-z5-e4x" secondAttribute="trailing" constant="12" id="Ibe-Fe-tHp"/>
+                            <constraint firstAttribute="trailing" secondItem="4mN-Yf-EKk" secondAttribute="trailing" id="X8J-bu-xuu"/>
+                            <constraint firstItem="DmC-0V-jZ1" firstAttribute="leading" secondItem="OVK-Qj-n9q" secondAttribute="leading" constant="143" id="Z1c-0y-LCF"/>
+                            <constraint firstItem="DmC-0V-jZ1" firstAttribute="centerX" secondItem="4BC-z5-e4x" secondAttribute="centerX" constant="-3.5" id="ZDl-nY-8j1"/>
+                            <constraint firstItem="4mN-Yf-EKk" firstAttribute="trailing" secondItem="Cjk-oN-vEF" secondAttribute="trailing" id="gD6-qP-fnN"/>
+                            <constraint firstItem="Cjk-oN-vEF" firstAttribute="top" secondItem="DmC-0V-jZ1" secondAttribute="bottom" constant="20" id="mcz-Sr-Uh2"/>
+                            <constraint firstItem="DmC-0V-jZ1" firstAttribute="top" secondItem="4BC-z5-e4x" secondAttribute="bottom" priority="1" constant="108" id="pnr-Hv-CmW"/>
+                            <constraint firstItem="4mN-Yf-EKk" firstAttribute="bottom" secondItem="Cjk-oN-vEF" secondAttribute="bottom" id="qjL-yl-3HY"/>
+                            <constraint firstItem="4mN-Yf-EKk" firstAttribute="leading" secondItem="Cjk-oN-vEF" secondAttribute="leading" id="yXQ-N9-Llh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OVK-Qj-n9q"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="4mN-Yf-EKk" id="Lhs-OK-gvA"/>
+                        <outlet property="descriptionLabel" destination="4BC-z5-e4x" id="duy-XT-4Cm"/>
+                        <outlet property="pageController" destination="DmC-0V-jZ1" id="YAN-gI-yPW"/>
+                        <outlet property="skipButton" destination="Cjk-oN-vEF" id="aKi-Fw-I6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WP1-DL-tOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="84.107946026986511"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1Intro" width="750" height="1334"/>
+    </resources>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="84" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="Nordic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="83.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBe-XK-B8c">
+                        <rect key="frame" x="13" y="11" width="287" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="287" id="1lH-Yf-c42"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAd-fX-z2c">
+                        <rect key="frame" x="319" y="26" width="49" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="dFz-cp-XSR"/>
+                            <constraint firstAttribute="width" constant="47" id="qOJ-Go-8dc"/>
+                        </constraints>
+                        <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yAd-fX-z2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="Cox-Wm-fjY"/>
+                    <constraint firstItem="CBe-XK-B8c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-7" id="Nno-ZL-Bld"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CBe-XK-B8c" secondAttribute="bottom" id="eiB-yc-6dq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yAd-fX-z2c" secondAttribute="bottom" constant="16" id="h46-vS-zW5"/>
+                    <constraint firstItem="CBe-XK-B8c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ng5-7c-gEP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yAd-fX-z2c" secondAttribute="trailing" constant="11" id="yt5-VQ-45U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="CBe-XK-B8c" id="EBu-gO-taR"/>
+                <outlet property="optionSwitch" destination="yAd-fX-z2c" id="Vwz-ln-P3l"/>
+            </connections>
+            <point key="canvasLocation" x="114.40000000000001" y="66.566716641679164"/>
+        </tableViewCell>
+    </objects>
+</document>
